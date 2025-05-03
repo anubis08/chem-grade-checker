@@ -48,79 +48,88 @@ function GradeCheck() {
   return (
     <div
       style={{
-        maxWidth: '500px',
-        margin: 'auto',
-        padding: '1.5rem',
-        background: '#000', 
-        borderRadius: '12px',
-        fontFamily: 'Arial, sans-serif',
-        color: '#fff', 
-        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-        backdropFilter: 'blur(10px)', 
+        height: '100vh',
+        margin: 0,
+        padding: 0,
+        backgroundColor: '#000',
       }}
     >
-      <h2 style={{ textAlign: 'center', fontSize: '1.5rem' }}>
-        Chem Skip Checker
-      </h2>
-
-      <label style={labelStyle}>Points right now (out of 277):</label>
-      <input
-        value={currentPoints}
-        onChange={e => setCurrentPoints(e.target.value)}
-        type='number'
-        style={inputStyle}
-      />
-
-      <label style={labelStyle}>Big Exam (out of 40):</label>
-      <input
-        value={bigExam}
-        onChange={e => setBigExam(e.target.value)}
-        type='number'
-        style={inputStyle}
-      />
-
-      <label style={labelStyle}>Mini Exam (out of 48):</label>
-      <input
-        value={miniExam}
-        onChange={e => setMiniExam(e.target.value)}
-        type='number'
-        style={inputStyle}
-      />
-
-      <button
-        onClick={calculateGrade}
+      <div
         style={{
-          backgroundColor: '#333', 
-          color: '#fff', 
-          border: 'none',
-          padding: '10px 16px',
-          borderRadius: '6px',
-          marginTop: '1rem',
-          cursor: 'pointer',
-          fontSize: '1rem',
-          width: '100%',
-          transition: 'background-color 0.3s',
-        }}
-        onMouseEnter={e => (e.target.style.backgroundColor = '#444')}
-        onMouseLeave={e => (e.target.style.backgroundColor = '#333')}
-      >
-        Check My Grade
-      </button>
-
-      <pre
-        style={{
-          marginTop: '20px',
-          background: 'rgba(255, 255, 255, 0.1)', //this may or may not look good lol
-          padding: '1rem',
-          borderRadius: '6px',
-          fontSize: '1rem',
-          whiteSpace: 'pre-wrap',
-          wordWrap: 'break-word',
+          maxWidth: '500px',
+          margin: 'auto',
+          padding: '1.5rem',
+          background: 'rgba(0, 0, 0, 0.7)',
+          borderRadius: '12px',
+          fontFamily: 'Arial, sans-serif',
           color: '#fff',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
         }}
       >
-        {result}
-      </pre>
+        <h2 style={{ textAlign: 'center', fontSize: '1.5rem' }}>
+          Chem Skip Checker
+        </h2>
+
+        <label style={labelStyle}>Points right now (out of 277):</label>
+        <input
+          value={currentPoints}
+          onChange={e => setCurrentPoints(e.target.value)}
+          type='number'
+          style={inputStyle}
+        />
+
+        <label style={labelStyle}>Big Exam (out of 40):</label>
+        <input
+          value={bigExam}
+          onChange={e => setBigExam(e.target.value)}
+          type='number'
+          style={inputStyle}
+        />
+
+        <label style={labelStyle}>Mini Exam (out of 48):</label>
+        <input
+          value={miniExam}
+          onChange={e => setMiniExam(e.target.value)}
+          type='number'
+          style={inputStyle}
+        />
+
+        <button
+          onClick={calculateGrade}
+          style={{
+            backgroundColor: '#1d1d1d',
+            color: '#fff',
+            border: 'none',
+            padding: '10px 16px',
+            borderRadius: '6px',
+            marginTop: '1rem',
+            cursor: 'pointer',
+            fontSize: '1rem',
+            width: '100%',
+            transition: 'background-color 0.3s',
+          }}
+          onMouseEnter={e => (e.target.style.backgroundColor = '#333')}
+          onMouseLeave={e => (e.target.style.backgroundColor = '#1d1d1d')}
+        >
+          Check My Grade
+        </button>
+
+        <pre
+          style={{
+            marginTop: '20px',
+            background: 'rgba(255, 255, 255, 0.1)',
+            padding: '1rem',
+            borderRadius: '6px',
+            fontSize: '1rem',
+            whiteSpace: 'pre-wrap',
+            wordWrap: 'break-word',
+            color: '#fff',
+          }}
+        >
+          {result}
+        </pre>
+      </div>
     </div>
   );
 }
@@ -130,7 +139,7 @@ const labelStyle = {
   margin: '1rem 0 0.5rem',
   fontWeight: '600',
   fontSize: '1rem',
-  color: '#fff', 
+  color: '#fff',
 };
 
 const inputStyle = {
@@ -143,8 +152,8 @@ const inputStyle = {
   border: '1px solid #555',
   outline: 'none',
   boxSizing: 'border-box',
-  background: '#222', 
-  color: '#fff', 
+  background: '#333',
+  color: '#fff',
 };
 
 export default GradeCheck;
