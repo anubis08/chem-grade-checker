@@ -51,12 +51,12 @@ function GradeCheck() {
         maxWidth: '500px',
         margin: 'auto',
         padding: '1.5rem',
-        background: 'rgba(0, 0, 0, 0.7)',
+        background: '#000', 
         borderRadius: '12px',
         fontFamily: 'Arial, sans-serif',
-        color: '#fff',
+        color: '#fff', 
         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-        backdropFilter: 'blur(10px)',
+        backdropFilter: 'blur(10px)', 
       }}
     >
       <h2 style={{ textAlign: 'center', fontSize: '1.5rem' }}>
@@ -90,8 +90,8 @@ function GradeCheck() {
       <button
         onClick={calculateGrade}
         style={{
-          backgroundColor: '#1d1d1d',
-          color: '#fff',
+          backgroundColor: '#333', 
+          color: '#fff', 
           border: 'none',
           padding: '10px 16px',
           borderRadius: '6px',
@@ -101,8 +101,8 @@ function GradeCheck() {
           width: '100%',
           transition: 'background-color 0.3s',
         }}
-        onMouseEnter={e => (e.target.style.backgroundColor = '#333')}
-        onMouseLeave={e => (e.target.style.backgroundColor = '#1d1d1d')}
+        onMouseEnter={e => (e.target.style.backgroundColor = '#444')}
+        onMouseLeave={e => (e.target.style.backgroundColor = '#333')}
       >
         Check My Grade
       </button>
@@ -110,7 +110,7 @@ function GradeCheck() {
       <pre
         style={{
           marginTop: '20px',
-          background: 'rgba(255, 255, 255, 0.1)',
+          background: 'rgba(255, 255, 255, 0.1)', //this may or may not look good lol
           padding: '1rem',
           borderRadius: '6px',
           fontSize: '1rem',
@@ -130,7 +130,7 @@ const labelStyle = {
   margin: '1rem 0 0.5rem',
   fontWeight: '600',
   fontSize: '1rem',
-  color: '#fff',
+  color: '#fff', 
 };
 
 const inputStyle = {
@@ -143,8 +143,8 @@ const inputStyle = {
   border: '1px solid #555',
   outline: 'none',
   boxSizing: 'border-box',
-  background: '#333',
-  color: '#fff',
+  background: '#222', 
+  color: '#fff', 
 };
 
 export default GradeCheck;
